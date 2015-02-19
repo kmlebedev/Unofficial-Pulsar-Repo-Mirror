@@ -1,8 +1,0 @@
-<settings>
-	
-	<category label="General">
-		<setting label="Engine" type="lsep" />	
-		<setting id="engine" label="BitTorrent player" type="enum" default="0" values="XBMCtorrent|Pulsar"/>
-	</category>
-
-</settings>

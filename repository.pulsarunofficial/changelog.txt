@@ -1,8 +1,0 @@
-V1.0.1
-* Updated Disclaimer
-
-V1.0.0
-* Initial Release (1136 downloads)
-
-
-

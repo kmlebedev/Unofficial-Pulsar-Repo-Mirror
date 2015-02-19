@@ -1,5 +1,0 @@
-Version 2.1.8
-TV Shows fix
-
-Version 2.1.7
-First version
