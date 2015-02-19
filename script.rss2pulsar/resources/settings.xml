@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General">
+		<setting label="Movie Folder:" type="folder" id="movie_folder" source="auto" option="writeable"/>
+		<setting label="Show Folder:" type="folder" id="show_folder" source="auto" option="writeable"/>
+        <setting label="Plugin to use:" type="labelenum" id="plugin" values="Pulsar|KmediaTorrent|XBMCtorrent"/>
+		<setting label="Overwrite Existent .strm Files:" type="bool" id="overwrite" default="false"/>
+		<setting label="Accept All Duplicated Files:" type="bool" id="duplicated" default="false"/>
+		<setting label="Notification Message" type="lsep"/>
+		<setting label="Time (miliseconds):" type="slider" id="time_noti" default="1500" range="0,125,2000" option="int" />    
+	</category>
+	<category label="Service">
+		<setting label="Run as Service (check in every login):" type="bool" id="service" default="true"/>
+		<setting label="Persistent Update @ 8h (experimental):" type="bool" id="persistent" enable="eq(-1,true)" default="false"/>
+	</category>
+	<category label="Search">
+		<setting label="URL Search: (QUERY is marker):" type="text" id="query" default="https://kickass.so/usearch/QUERY/?rss=1"/>
+	</category>
+	<category label="Movies Filters">
+		<setting label="Advance Setup (for 'AND' use space, for 'OR' use comma)" type="lsep"/>
+		<setting label="Accept File with:" type="text" id="movie_key_allowed" default=""/>
+		<setting label="Block File with:" type="text" id="movie_key_denied" default=""/>
+		<setting label="Easy Setup Keywords after the query" type="lsep"/>
+		<setting label="480p" type="labelenum" id="movie_qua1" values="Accept File|Block File|Filter Off" default="Filter Off"/>
+		<setting label="HDTV" type="labelenum" id="movie_qua2" values="Accept File|Block File|Filter Off" default="Filter Off"/>
+		<setting label="720p" type="labelenum" id="movie_qua3" values="Accept File|Block File|Filter Off" default="Filter Off"/>
+		<setting label="1080p" type="labelenum" id="movie_qua4" values="Accept File|Block File|Filter Off" default="Filter Off"/>
+		<setting label="3D" type="labelenum" id="movie_qua5" values="Accept File|Block File|Filter Off" default="Block File"/>
+		<setting label="CAM" type="labelenum" id="movie_qua6" values="Accept File|Block File|Filter Off" default="Block File"/>
+		<setting label="TeleSync" type="labelenum" id="movie_qua7" values="Accept File|Block File|Filter Off" default="Block File"/>
+		<setting label="Trailer" type="labelenum" id="movie_qua8" values="Accept File|Block File|Filter Off" default="Block File"/>
+	</category>
+	<category label="TV Filters">
+		<setting label="Advance Setup (for 'AND' use space, for 'OR' use comma)" type="lsep"/>
+		<setting label="Accept File with:" type="text" id="TV_key_allowed" default=""/>
+		<setting label="Block File with:" type="text" id="TV_key_denied" default=""/>
+		<setting label="Easy Setup Keywords after the query" type="lsep"/>
+		<setting label="480p" type="labelenum" id="TV_qua1" values="Accept File|Block File|Filter Off" default="Filter Off"/>
+		<setting label="HDTV" type="labelenum" id="TV_qua2" values="Accept File|Block File|Filter Off" default="Filter Off"/>
+		<setting label="720p" type="labelenum" id="TV_qua3" values="Accept File|Block File|Filter Off" default="Filter Off"/>
+		<setting label="1080p" type="labelenum" id="TV_qua4" values="Accept File|Block File|Filter Off" default="Filter Off"/>
+	</category>
+</settings>

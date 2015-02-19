@@ -1,0 +1,1292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="1.info" name=" Please read this, first! (press enter)" version="0.0.1" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Providers</summary>
+		<description lang="en">Pulsar Providers
+
+What they are
+Pulsar Providers are specially crafted addons to function with the Pulsar Video Addon. They are seperately installed, normal Kodi addons, and thus can be installed/updated/distributed just like any other addon.
+The Pulsar Video Addon will NOT function without a Provider installed.
+
+Please do NOT contact steeve regarding providers connecting to illegal sources, for legal reasons he cannot comment on specific problems regarding illegal sources. He will however partake in general discussions regarding provider development.
+
+How to Install & Setup Pulsar/Providers
+Installing Pulsar & Providers is an easy process to do so Follow this Guide by Alex(edge06) - http://www.homemediatech.net/how-to-setu...native/789
+
+How to Write your own Provider(s)
+Writing Plugins for Kodi can be a rewarding experience, you get to build something and you get to contribute back to an amazing community.
+If you are interested in writing your own provider(s), Follow this Guide by Alex(edge06) - http://www.homemediatech.net/how-to-guid...mckodi/959
+
+Sample Pulsar provider: https://github.com/steeve/script.pulsar.dummy
+
+Where to Download Providers
+Providers can be downloaded from the Unofficial Pulsar Repo or Kodi Underground Repo. Both repositories are frequently updated and maintained. Installing both repositories will ensure you always have the latest version of provider(s).
+
+Unofficial Pulsar Repository (1.0.1) by iCanuck - Download Link
+
+Kodi Underground (1.0.2) by prilly - Download Link
+
+Providers Hosted on Repos
+There are several duplicate providers on the repositories, these are providers with different authors. Each duplicate provider may have different quality, file size, and language options. To change these settings see 'configure provider settings' below. It is the user's preference which providers they choose to use.
+
+Current Providers List - Link
+
+FAQ
+How to report provider bugs?
+Put your xbmc.log on pastebin and post it in this thread, the post must be directed to the author of the provider in question.
+If you don't know how to do this, just follow the guide at: http://kodi.wiki/view/Log_file/Easy
+Please do NOT direct provider related questions to steeve.
+
+How many providers can I have enabled at one time?
+Depending on your internet service provider's speed you may enable up to approximately 6 providers at once. If you enable too many providers at once this will cause Pulsar to timeout and you will receive a notification that the 'script has failed'.
+
+How do I Enable/Disable Providers?
+Providers can be enabled or disabled the same as any other Kodi addon.
+Settings -> Add-ons -> Get Add-ons -> Pulsar Unofficial Repo -> the provider title -> Enable/Disable
+
+How do I configure provider settings?
+Settings -> Add-ons -> Enabled add-ons -> Programs -> the provider title -> Configure
+or
+Settings -> Add-ons -> Get Add-ons -> Pulsar Unofficial Repo -> the provider title -> Configure
+
+The provider's site is blocked, what can I do?
+Some users in certain countries may have the provider's site blocked. To get around this you must find a proxy/mirror of the original site.
+1) Search web for proxy/mirror url
+2) Settings -> Add-ons -> Enabled add-ons -> Programs -> the provider title -> Configure
+3) Replace original url with proxy url (eg. replaced hxxp://sitename.se with hxxp://sitenameproxy.ws)
+
+The repositories are blank or don't show the latest version of provider...
+You must 'Force Refresh' the Repository in question.
+If you don't know how to do this, just follow the guide at: http://kodi.wiki/view/Add-on_manager#Force_refresh
+
+How can I get my provider hosted on repos?
+Contact both iCanuck & prilly via private message.
+
+How can I use a previous version of provider after it auto updates?
+1) Uninstall provider
+2) Turn off auto updates within the addon manager.
+If you don't know how to do this, just follow the guide at: http://kodi.wiki/view/Add-on_manager#Updating
+3) Download and manual install the provider addon zip file.
+Provider Archive - Link</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="plugin.video.magnetplayer" name="Magnet Player" version="1.0.1" provider-name="Doc Shadrach">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary></summary>
+		<description>Reproduce 'Magnet Links' utilizando XBMCtorrent y/o Pulsar.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.video.pulsar" name="Pulsar" version="0.4.6" provider-name="steeve">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="navigation.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup"/>
+    <extension point="xbmc.python.module" library="resources/site-packages" />
+    <extension point="xbmc.subtitle.module" library="navigation.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>en</language>
+        <website><![CDATA[https://github.com/steeve/plugin.video.pulsar]]></website>
+        <forum><![CDATA[http://forum.xbmc.org/showthread.php?tid=200957]]></forum>
+        <source><![CDATA[https://github.com/steeve/plugin.video.pulsar]]></source>
+        <language>en</language>
+        <license><![CDATA[Non commercial. See https://github.com/steeve/plugin.video.pulsar/blob/master/LICENSE]]></license>
+        <summary><![CDATA[Pulsar: Universal streaming]]></summary>
+        <description><![CDATA[Follow @pulsarhq on Twitter]]></description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.xbmctorrent" name="XBMCtorrent" version="0.6.4" provider-name="steeve">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <website><![CDATA[http://j.mp/xbmctorrent]]></website>
+        <forum><![CDATA[http://j.mp/xbmctorrent]]></forum>
+        <source><![CDATA[https://github.com/steeve/xbmctorrent]]></source>
+        <language></language>
+        <license><![CDATA[GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007]]></license>
+        <summary><![CDATA[XBMCtorrent: Torrent streaming for XBMC.]]></summary>
+        <description><![CDATA[Watch torrents directly from XBMC, without waiting.
+
+To get the latest updates:
+Twitter: twitter.com/xbmctorrent
+Facebook: facebook.com/xbmctorrent
+XBMC HUB: j.mp/xbmctorrent]]></description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.xbmctorrentmod" name="XBMCtorrent to Pulsar" version="1.0.1" provider-name="Doc Shadrach">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary></summary>
+		<description>Modifies XBMCtorrent's scrapers.'</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.kodiunderground" name="[COLOR FF2da7d3]Kodi Underground[/COLOR]" version="1.0.3" provider-name="Prilly">
+	<extension point="xbmc.addon.repository" name="Kodi Underground">
+       <info>http://kodi.speedbox.me/svn_kodi/trunk/addons.xml</info>
+       <checksum>http://kodi.speedbox.me/svn_kodi/trunk/addons.xml.md5</checksum>
+       <datadir zip="true">http://kodi.speedbox.me/svn_kodi/trunk/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Kodi Underground</summary>
+		<description>Kodi Underground - Unofficial Kodi repository</description>
+		<disclaimer>The owners and submitters to this repository do not host or distribute any of the content
+            displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+		<platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website>http://kodi.speedbox.me</website>
+        <email>prilly@speedbox.me</email>
+	</extension>
+</addon>
+
+<addon id="repository.pulsarunofficial" name="Pulsar Unofficial Repo" version="1.0.1" provider-name="iCanuck">
+	<extension point="xbmc.addon.repository" name="Pulsar Unofficial Repo">
+       <info>https://icanuckxbmcrepo.svn.cloudforge.com/pulsarunofficialrepo/trunk/addons.xml</info>
+       <checksum>https://icanuckxbmcrepo.svn.cloudforge.com/pulsarunofficialrepo/trunk/addons.xml.md5</checksum>
+       <datadir zip="true">https://icanuckxbmcrepo.svn.cloudforge.com/pulsarunofficialrepo/trunk/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Pulsar and Providers</summary>
+		<description>Download and install Pulsar and Providers</description>
+		<disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.pulsarunofficialmirror" name="Pulsar Unofficial Repo Mirror" version="1.0.0" provider-name="iCanuck">
+	<extension point="xbmc.addon.repository" name="Pulsar Unofficial Repo Mirror">
+        <info compressed="false">https://github.com/icanuck/Unofficial-Pulsar-Repo-Mirror/raw/master/addons.xml</info>
+        <checksum>https://github.com/icanuck/Unofficial-Pulsar-Repo-Mirror/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/icanuck/Unofficial-Pulsar-Repo-Mirror/raw/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Pulsar and Providers</summary>
+		<description>Download and install Pulsar and Providers</description>
+		<disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.elitetorrent2pulsar" name="Pulsar [COLOR FF2658a8]ELITETORRENT2PULSAR[/COLOR] Español" version="0.1.5" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">ELITETORRENT2PULSAR2PULSAR</summary>
+		<description lang="en">This script creates .strm files from YTS to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.eztv2pulsar" name="Pulsar [COLOR FF2658a8]EZTV2PULSAR[/COLOR]" version="0.1.8" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">EZTV2PULSAR</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.horriblesubs2pulsar" name="Pulsar [COLOR ff2658a8]HorribleSubs2PULSAR[/COLOR]" version="0.1.8" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">HorribleSubs2PULSAR</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.provider.manager" name="Pulsar MC's [COLOR purple]Provider Manager[/COLOR]" version="2.1.15" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar MC's Provider Manager</summary>
+		<description lang="en">It allows to change the configuration from all installed MC's providers at once</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">-It only works with MC's providers</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.animes-br" name="Pulsar Animes Provider (pt-br)" version="0.0.6" provider-name="platbr">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Animes Provider (pt-br)</summary>
+		<language></language>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.arenabg-mc" name="Pulsar MC's [COLOR green]ArenaBg[/COLOR] Provider" version="2.1.20" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar ArenaBg Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.btjunkie-mc" name="Pulsar MC's [COLOR ffD8FFA6]BTjunkie[/COLOR] Provider" version="2.1.20" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar BTjunkie Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.btstorrent-mc" name="Pulsar MC's [COLOR green]Btstorrent (Anime only)[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Btstorrent for search Anime Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.cpb" name="Pulsar CPasBien Provider [FR] (Sheppy)" version="0.4.0" provider-name="Sheppy">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+    <import addon="plugin.video.pulsar" version="0.4.2"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Pulsar Provider for french tracker CPasBien </summary>
+    <description lang="en">
+      Provides Pulsar sources from the french tracker CPasBien.
+    </description>
+    <summary lang="fr">Provider Pulsar pour tracker CPasBien [FR]</summary>
+    <description lang="fr">
+      Fournit des sources multimédia pour l'addon Pulsar à partir du tracker français CPasBien.
+    </description>
+    <language>fr</language>
+    <platform>all</platform>
+    <website>http://forum.eric-lafontaine.com/</website>
+    <disclaimer lang="en">Some parts of the files provides by this addon can be illegal in your country. </disclaimer>
+    <disclaimer lang="fr">Le téléchargement de certaines sources obtenues par cette extension peut être illégal dans votre pays selon les lois en vigueur.</disclaimer>
+  </extension>
+</addon>
+
+<addon id="script.pulsar.demonoid-prilly" name="Pulsar Prilly's Demonoid Provider" version="1.0.6" provider-name="prilly">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.4"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Demonoid Provider</summary>
+		<description lang="en">This multilanguage Demonoid provider allows to choose the quality of video torrent which will feed Pulsar.[CR]
+            You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar[CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website>http://kodi.speedbox.me</website>
+        <email>prilly@speedbox.me</email>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.divxtotal-mc" name="Pulsar MC's [COLOR red]Divxtotal (Español)[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Divxtotal (Español) Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.dixatope-mc" name="Pulsar MC's [COLOR red]Dixatope (Español)[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Dixatope provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows[CR]I won't keep your upload quota, you need to use another software.</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.elitetorrent-mc" name="Pulsar MC's [COLOR red]EliteTorrent (Español)[/COLOR] Provider" version="2.1.14" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar EliteTorrent (Español) Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows[CR]I won't keep your upload quota, you need to use another software.</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.extratorrent-mc" name="Pulsar MC's [COLOR green]ExtraTorrent[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar ExtraTorrent with configuration</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.eztv-mc" name="Pulsar MC's [COLOR green]EZTV[/COLOR] Provider" version="2.1.19" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+		<import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar EZTV Provider using the EZTVapi.</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It only works with TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.eztv-platbr" name="platbr's Pulsar EZTV Provider" version="0.1.0" provider-name="platbr">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+		<import addon="plugin.video.pulsar" version="0.2"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">platbr's Pulsar EZTV Provider</summary>
+		<language></language>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.h33t-mc" name="Pulsar MC's [COLOR green]H33T[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar H33T provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows[CR]I won't keep your upload quota, you need to use another software.</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.horriblesubs-mc" name="Pulsar MC's [COLOR orange]HorribleSubs (Anime only)[/COLOR] Provider" version="2.1.19" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar HorribleSubs Provider with configuration</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It only works with Movies</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.ilcorsaronero-mc" name="Pulsar MC's [COLOR FFCE2B37]IlCorsaronero[/COLOR] Provider" version="2.1.19" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar IlCorsaronero Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.kiasmulti" name="Pulsar kickass multilanguage Provider" version="0.2.1" provider-name="gomezvd">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+		<import addon="plugin.video.pulsar" version="0.3"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar kickass multilanguage Provider</summary>
+		<language></language>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.kickass-mc" name="Pulsar MC's [COLOR green]KickAss[/COLOR] Provider" version="2.1.19" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Kickass Provider</summary>
+		<description lang="en">This Multilanguage provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.KickAssTorrents" name="Pulsar KickAssTorrents Provider" version="0.2" provider-name="cpkiller">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+		<import addon="plugin.video.pulsar" version="0.2"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar KickAssTorrents Provider</summary>
+		<language></language>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.magnetdl-mc" name="Pulsar MC's [COLOR green]Magnetdl[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Magnetdl Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.ncore" name="Pulsar NCore.cc Provider" version="1.0" provider-name="vzs">
+  <requires>
+    <import addon="xbmc.python" version="2.12.0"/>
+    <import addon="plugin.video.pulsar" version="0.2"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+    <provides>executable</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Pulsar NCore.cc with configuration</summary>
+    <description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+    <language></language>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.pulsar.newpct" name="Pulsar Newpct Provider" version="0.0.3" provider-name="gomezvd">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+		<import addon="plugin.video.pulsar" version="0.3"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Newpct multilanguage Provider</summary>
+		<language></language>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.newpct1-ys" name="Pulsar YS's NewPtc1 (Español) Provider" version="0.0.1" provider-name="ysilvela">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar NewPct1 (Español) Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows[CR]I won't keep your upload quota, you need to use another software.</description>
+		<summary lang="es">Proveedor Pulsar NewPct1 (Español)</summary>
+		<description lang="es">Este proveedor proporciona la capacidad de elegir la calidad del video torrent seleccionado.[CR]Tienes que configurar el add-on antes de usar Pulsar[CR]Funciona con peliculas y series[CR]No soy responsable de la información descargada.</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<disclaimer lang="es">Solo funciona con Pulsar 0.3.1![CR]De uso unicamente educativo[CR]Comprueba si es legal en tu pais antes de usar.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.nyaa-mc" name="Pulsar MC's [COLOR orange]Nyaa (Anime only)[/COLOR] Provider" version="2.1.19" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Nyaa Provider with configuration</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.oldpiratebay-mc" name="Pulsar MC's [COLOR ffD8FFA6]Isohunt - OldPirateBay[/COLOR] Provider" version="2.1.20" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Isohunt - Old Pirate Bay Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.omg" name="Pulsar OMGTorrent Provider" version="0.2.0" provider-name="Sheppy">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+    <import addon="plugin.video.pulsar" version="0.2"/>
+    <import addon="script.module.parsedom" />
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Pulsar OMGTorrent Provider</summary>
+    <description lang="en">
+      Provides Pulsar sources from the french tracker OMGTorrent.
+    </description>
+    <description lang="fr">
+      Fournit des sources multimédia pour l'addon Pulsar à partir du tracker français OMGTorrent.
+    </description>
+    <language>fr</language>
+    <platform>all</platform>
+    <website>http://forum.eric-lafontaine.com/</website>
+    <disclaimer lang="en">Some parts of the files provides by this addon can be illegal in your country. </disclaimer>
+    <disclaimer lang="fr">Le téléchargement de certaines sources obtenues par cette extension peut être illégal dans votre pays selon les lois en vigueur.</disclaimer>
+  </extension>
+</addon>
+
+<addon id="script.pulsar.publichd-mc" name="Pulsar MC's [COLOR green]PublicHD[/COLOR] Provider" version="2.1.19" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar PublicHD Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.rarbg-mc" name="Pulsar MC's [COLOR green]RARBG[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar RARBG Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.rutor-prilly" name="Pulsar Prilly's Rutor Provider" version="1.0.5" provider-name="prilly">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.4"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Rutor Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.
+            [CR]You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar![CR]It is just for educational purpose
+            [CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website>http://kodi.speedbox.me</website>
+        <email>prilly@speedbox.me</email>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.thepiratebay-mc" name="Pulsar MC's [COLOR ffD8FFA6]The Pirate Bay[/COLOR] Provider" version="2.1.20" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar ThePirateBay Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.torlock-mc" name="Pulsar MC's [COLOR green]TorLock[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar TorLock Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.torrentbit-mc" name="Pulsar MC's [COLOR green]TorrentBit[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar TorrentBit Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.torrentdb-mc" name="Pulsar MC's [COLOR green]Torrentdb[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Torrentdb Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.torrenthound-mc" name="Pulsar MC's [COLOR green]TorrentHound[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar TorrentHound provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows[CR]I won't keep your upload quota, you need to use another software.</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.torrentproject-mc" name="Pulsar MC's [COLOR green]Torrent Project[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Torrent Project Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.torrentsfm-mc" name="Pulsar MC's [COLOR green]Torrents.fm[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Torrents.fm Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.torrentz-mc" name="Pulsar MC's [COLOR ffD8FFA6]TorrentZ[/COLOR] Provider" version="2.1.20" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar TorrentZ Provider</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.yify-mc" name="Pulsar MC's [COLOR green]YIFY[/COLOR] Provider" version="2.1.18" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar YIFY Provider with configuration</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It only works with Movies</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.yify-platbr" name="platbr's Pulsar Yify Provider" version="0.0.4" provider-name="platbr">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.2"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">platbr's Pulsar Yify Provider</summary>
+		<language></language>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.pulsar.yourbittorrent-mc" name="Pulsar MC's [COLOR green]Yourbittorrent[/COLOR] Provider" version="2.1.18"
+       provider-name="mancuniancol">
+    <requires>
+        <import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Pulsar Yourbittorrent provider</summary>
+        <description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows[CR]I won't keep your upload quota, you need to use another software.
+        </description>
+        <language></language>
+        <platform>all</platform>
+        <forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+        <disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.
+        </disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    </extension>
+</addon>
+
+<addon id="script.rss2pulsar" name="Pulsar [COLOR ffff9900]RSS2PULSAR[/COLOR]" version="0.1.15" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar RSS2PULSAR</summary>
+		<description lang="en">This script creates .strm files from RSS source to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.search.play2pulsar" name="Pulsar [COLOR FFF35C9F]Search+Play2PULSAR[/COLOR]" version="0.0.7" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Search+Play2Pulsar</summary>
+		<description lang="en">This provider allows to choose the quality of video torrent which will feed Pulsar.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and some TV Shows</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.subscription.pulsar.favourites" name="Pulsar [COLOR FFFFD800]FAVOURITES[/COLOR] Subscription" version="0.2.1" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Favourites Subscription</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">The Timer code code from https://github.com/robweber/xbmclibraryautoupdate\nIt only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.subscription.pulsar.filmaffinity" name="Pulsar [COLOR FFFFD800]FilmAffinity[/COLOR] list subscription" version="0.2.1" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar FilmAffinity list subscription</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.subscription.pulsar.flixster" name="Pulsar [COLOR FFFFD800]FLIXTER[/COLOR] list subscription" version="0.2.1" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Flixter list subscription</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.subscription.pulsar.imdb" name="Pulsar [COLOR FFFFD800]IMDB[/COLOR] subscription" version="0.2.1" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar IMDB list subscription</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.subscription.pulsar.listal" name="Pulsar [COLOR FFFFD800]LISTAL [/COLOR] list subscription" version="0.2.1" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar LISTAL list subscription</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.subscription.pulsar.trakt" name="Pulsar [COLOR FFFFD800]TRAKT[/COLOR] list subscription" version="0.2.1" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar Trakr list subscription</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.subscription.rss.pulsar" name="Pulsar [COLOR FFFFD800]RSS[/COLOR] list subscription" version="0.2.1" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar RSS list subscription</summary>
+		<description lang="en">This script creates .strm files from personalize list to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.torrent.pulsar" name="Torrent2Pulsar" version="0.0.2" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Torrent2Pulsar</summary>
+		<description lang="en">This script allows play a torrent file using Pulsar</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.tpb2pulsar" name="Pulsar [COLOR FF2658a8]TBP2PULSAR[/COLOR]" version="0.1.13" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Pulsar TPB2PULSAR</summary>
+		<description lang="en">This script creates .strm files from RSS source to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="script.yts2pulsar" name="Pulsar [COLOR FF2658a8]YTS2PULSAR[/COLOR]" version="0.1.8" provider-name="mancuniancol">
+	<requires>
+		<import addon="xbmc.python" version="2.12.0"/>
+        <import addon="plugin.video.pulsar" version="0.3.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">YTS2PULSAR</summary>
+		<description lang="en">This script creates .strm files from YTS to be play for pulsar from the local library</description>
+		<language></language>
+		<platform>all</platform>
+		<forum>http://forum.xbmc.org/showthread.php?tid=204728</forum>
+		<disclaimer lang="en">It only works with Pulsar 0.3.1![CR]It is just for educational purpose[CR]Check if it is illegal in your country to use.</disclaimer>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	</extension>
+</addon>
+
+<addon id="service.library.data.provider" name="Library Data Provider" provider-name="BigNoid, Unfledged, Martijn" version="0.0.7">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+		<import addon="xbmc.json" version="6.0.0"/>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py" />
+	<extension library="service.py" point="xbmc.service" start="login" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Plugin for skins to provide library data throughout the skin.</summary>
+		<description lang="en">Plugin for skins to provide library data throughout the skin.</description>
+		<disclaimer lang="en">This plugin is not a standalone plugin, your skin must support it.</disclaimer>
+		<platform>all</platform>
+		<language />
+	</extension>
+</addon>
+</addons>
