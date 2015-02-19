@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.pulsar.ncore-cc" name="Pulsar NCore.cc Provider and Downloader" version="0.1.2" provider-name="Lazy">
+  <requires>
+    <import addon="xbmc.python" version="2.12.0"/>
+    <import addon="plugin.video.pulsar" version="0.2"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+    <provides>executable</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Pulsar NCore.cc with configuration</summary>
+    <description lang="en">This provider allows to search for video torrents which will feed Pulsar, or just add to the incomming folder of your Torrent client application.[CR]To use both option at the same time is not recommended, may cause problems.[CR]You need to config the add-on before using Pulsar[CR]It works with Movies and TV Shows</description>
+    <language></language>
+    <platform>all</platform>
+  </extension>
+</addon>
