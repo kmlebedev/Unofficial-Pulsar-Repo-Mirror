@@ -1,5 +1,0 @@
-Version 0.0.4
-Almost finished version
-
-Version 0.0.1
-First version
