@@ -1,0 +1,5 @@
+Version 0.3.4
+Add rebuild all episodes and add for season
+
+Version 0.0.1
+First version

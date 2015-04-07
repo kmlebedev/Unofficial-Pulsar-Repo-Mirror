@@ -1,0 +1,6 @@
+[B]0.1.0[/B]
+First working release. Video streaming is working
+
+[B]0.1.2[/B]
+Feature: option is added to just feed torrent client to download files
+
