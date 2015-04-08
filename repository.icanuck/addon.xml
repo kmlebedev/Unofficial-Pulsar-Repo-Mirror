@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.icanuck" name="iCanuck's Kodi Repository" version="2.1.0" provider-name="iCanuck">
+	<extension point="xbmc.addon.repository" name="iCanuck's Kodi Repository">
+       <info>https://icanuckxbmcrepo.svn.cloudforge.com/icanuckkodirepo/trunk/addons.xml</info>
+       <checksum>https://icanuckxbmcrepo.svn.cloudforge.com/icanuckkodirepo/trunk/addons.xml.md5</checksum>
+       <datadir zip="true">https://icanuckxbmcrepo.svn.cloudforge.com/icanuckkodirepo/trunk/</datadir>	
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install iCanuck's Kodi Skins/Addons</summary>
+		<description>Download and install Kodi Skins and Addons by iCanuck</description>
+		<platform>all</platform>
+	</extension>
+</addon>
