@@ -231,7 +231,7 @@ class Filtering:
                 for item in re.split('\s', key):
                     item = item.replace('?', ' ')
                     if strict: item = ' ' + item + ' '  # it makes that strict the comparation
-                    if item.upper() in value.upper():
+                    if item.decode('utf-8').upper() in value.decode('utf-8').upper():
                         res2.append(True)
                     else:
                         res2.append(False)
