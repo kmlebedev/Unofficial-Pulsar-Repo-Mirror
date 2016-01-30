@@ -267,6 +267,7 @@ class Filtering:
 
     # verify
     def verify(self, name, size):
+        result = false
         name = self.safe_name(name)
         self.title = self.safe_name(self.title)
         self.reason = name.replace(' - ' + self.name_provider, '') + ' ***Blocked File by'
@@ -299,7 +300,7 @@ def clean_html(data):
 def translator(imdb_id, language, extra=True):
     import json
     browser1 = Browser()
-    keywords = {'en': '', 'de': '', 'es': 'espa', 'fr': 'french', 'it': 'italian', 'pt': 'portug'}
+    keywords = {'ru', 'en': '', 'de': '', 'es': 'espa', 'fr': 'french', 'it': 'italian', 'pt': 'portug'}
     url_themoviedb = "http://api.themoviedb.org/3/find/%s?api_key=8d0e4dca86c779f4157fc2c469c372ca&language=%s&external_source=imdb_id" % (imdb_id, language)
     if browser1.open(url_themoviedb):
         movie = json.loads(browser1.content)
