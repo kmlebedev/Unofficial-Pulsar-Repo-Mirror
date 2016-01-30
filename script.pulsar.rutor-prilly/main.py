@@ -10,9 +10,9 @@ torrent_pattern = re.compile(r'''<tr class=".*"><td>.*</td><td.*><a class="downg
 tag = re.compile(r'<.*?>')
 
 def extract_torrents(data):
-   # try:
+    results = []
+    try:
         cont = 0
-        results = []
         for el in torrent_pattern.finditer(data):
             d = el.groupdict()
             info = common.Magnet(d['magnet'])
@@ -28,9 +28,10 @@ def extract_torrents(data):
             if cont == settings.max_magnets:
                 break
         provider.log.info('>>>>>>' + str(cont) + ' torrents sent to Pulsar<<<<<<<')
-        return results
-   # except:
+    except:
         provider.log.error('>>>>>>>ERROR parsing data<<<<<<<')
+    return results
+
 def search(query):
     query += ' ' + settings.extra  # add the extra information
     query = filters.type_filtering(query, '%20')  # check type filter and set-up filters.title
